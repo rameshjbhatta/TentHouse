@@ -1,0 +1,37 @@
+.logo {
+    /* Set the logo dimensions and position */
+    width: 50px;
+    height: 50px;
+    position: relative;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(207, 228, 18, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .logo img {
+    /* Adjust the logo image dimensions */
+    width: 300%;
+    height: 100%;
+    object-fit:cover; /* Preserve aspect ratio */
+  }
+  
+  /* Example of additional styles you can apply to the logo */
+  
+ 
+  
+  .logo:hover {
+    transform: scale(0.1);
+  }
+  
+  .logo a {
+    /* Adjust text styles if the logo is within a link */
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .logo a:hover {
+    color: #ff0000;
+  }
+  

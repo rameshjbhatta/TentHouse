@@ -1,0 +1,7 @@
+
+  .background-image {
+    background-image: url('{{ STATIC_URL }}images/bgsky.jpg');
+    background-size: cover;
+    alt: backgroundimg;
+  }
+  

@@ -1,0 +1,14 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  h2{
+    font-family:sans-serif;
+    color: rgb(233, 183, 18);
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  

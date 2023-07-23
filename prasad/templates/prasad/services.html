@@ -1,0 +1,50 @@
+{% extends 'prasad/base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+    <div style="padding-top: 10px;"><h1><p style="padding-left:500px;color:rgb(201, 165, 8) ;font-size:larger">OUR SERVICES</p></h1></div>
+    
+    <!-- cards group -->
+    
+          <div class="card-group" >
+            <div class="card" >
+              <img class="card-img-top" src="{% static 'prasad/images/design6.jpg' %}" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Wedding Decorations</h5>
+                <p class="card-text">Transform your venue with personalized touches, beautiful floral arrangements, and carefully chosen decor elements to create an enchanting and memorable ambiance for your special day.</p>
+                <p class="card-text"><small class="text-muted">BTH</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="{% static 'prasad/images/design9.jpg' %}"  alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">School and other Events Decorations</h5>
+                <p class="card-text">Elevate your school events and other special occasions with captivating decorations that set the stage, creating a vibrant and memorable atmosphere for all attendees.</p>
+                <p class="card-text"><small class="text-muted">BTH</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="{% static 'prasad/images/hshoot7.jpg' %}"  alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Photo Shoot</h5>
+                <p class="card-text">Capture moments that last a lifetime with our professional photography services, preserving your cherished memories in stunning images.</p>
+                <p class="card-text"><small class="text-muted">BTH</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="{% static 'prasad/images/dj&sound.jpg' %}"  alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">DJ and Sound Service</h5>
+                <p class="card-text">Professional DJ and sound services provide top-notch music and audio solutions for events, creating an immersive and unforgettable experience.</p>
+                <p class="card-text"><small class="text-muted">BTH</small></p>
+              </div>
+            </div>
+          </div>
+       
+    
+    
+
+{% endblock %}

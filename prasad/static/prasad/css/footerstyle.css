@@ -1,0 +1,8 @@
+#footerblurb { background:#39a8f1;color:rgb(163, 197, 9);}
+			#footerblurb-inner { margin:0 auto; width:970px; padding:10px;background:#2bb7cf;border-bottom-right-radius:15px;border-bottom-left-radius:15px;}
+			#footerblurb .column { margin:0; text-align:justify; float:left;width:250px;padding:0 24px;}
+			
+		
+			#footer { background:#b89705ce;}
+			#footer-inner { margin:auto; text-align:center; padding:12px; width:970px;}
+			#footer a {color:rgb(33, 158, 216);text-decoration:none;}
