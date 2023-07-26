@@ -6,21 +6,33 @@
 
 <br>
 <div class="container">
-    
-    <h2 style="color:chocolate;">BISWASH TENT HOUSE</h2>
+
+    <h2 style="color:#10ca29dc;">BISWASH TENT HOUSE</h2>
     <hr>
-    <img src="{% static 'prasad/images/address.png' %}"><a href="https://www.google.com/maps?rlz=1C1CHBF_enNP1030NP1030&output=search&q=biswash+tent+house+jhalari&entry=mc&sa=X&ved=2ahUKEwiEzZTHgPf_AhX7bmwGHTcvDpsQ0pQJegQIChAB" >Shuklafanta , Pipladi road, jhalari, opposite of khulamancha</a>
-    <p> <img src="{% static 'prasad/images/mail.png' %}" ><a href="https://mail.google.com/mail/u/0/#inbox?compose=new" >biswashmoviespoint@gmail.com</a></p>
-    <img src="{% static 'prasad/images/mobile.png' %}" > 9848724282,099540190</p>
-    <h1 style="color:chocolate;">Leave Your Message</h1><hr>
+    <img src="{% static 'prasad/images/address.png' %}"><a
+        href="https://www.google.com/maps?rlz=1C1CHBF_enNP1030NP1030&output=search&q=biswash+tent+house+jhalari&entry=mc&sa=X&ved=2ahUKEwiEzZTHgPf_AhX7bmwGHTcvDpsQ0pQJegQIChAB"
+        target="_blank">Shuklafanta , Pipladi road, jhalari, opposite of khulamancha</a>
+    <p> <img src="{% static 'prasad/images/mail.png' %}"><a href="https://mail.google.com/mail/u/0/#inbox?compose=new"
+            target="_blank">bhattbhaskar1@gmail.com,prakashdattbhatt@gmail.com </a></p>
+    <img src="{% static 'prasad/images/mobile.png' %}"> 9848724282,9858750114</p>
+    <h1 style="color:#10ca29dc;">Leave Your Message</h1>
+    <hr>
 
     <form method="post" class="my-form">
         {% csrf_token %}
-        
-    {{ form.as_p }}
-    <input type="submit" value="submit" name="submit">
-</form>
+        {{ form.as_p }}
+        <input type="submit" value="submit" name="submit">
+        <ul class="message">
+            {% if messages %}
+            {% for message in messages %}
+            {{message}}
+            {% endfor %}
+            {% endif %}
+        </ul>
+    </form>
+    <br>
+    <a href="https://www.google.com/maps/place/Bishwas+Tent+House+Jhalari/@28.9006941,80.3460633,17z/data=!3m1!4b1!4m6!3m5!1s0x39a1a5ab0d017ebd:0x7b46e58eb96cb99f!8m2!3d28.9006894!4d80.3486382!16s%2Fg%2F11rgl614bw?entry=ttu"
+        target="_blank"> <img src="{% static 'prasad/images/map.jpg' %}" width="700px" alt="map" id="map"></a>
 </div>
-<br><br><br><br>
-
+<br>
 {% endblock %}
