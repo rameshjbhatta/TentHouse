@@ -14,28 +14,39 @@
   <!-- Bootstrap CSS -->
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
-
+  <link rel="stylesheet" href="{% static 'prasad/css/navbar.css' %}">
   <link rel="stylesheet" href="{% static 'prasad/css/logo.css' %}">
   <link rel="stylesheet" href="{% static 'prasad/css/about.css' %}">
   <link rel="stylesheet" href="{% static 'prasad/css/footerstyle.css' %}">
   <link rel="stylesheet" href="{% static 'prasad/css/style.css' %}">
-
-  <link rel="stylesheet" href="{% static 'prasad/css/form.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'prasad/css/contact.css' %}">
+
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
 
   <title>Biswash Tent House</title>
 
 </head>
 
-<body>
+<body style="background-color: #f5f4f8e7;">
+  <div id="fh5co-wrapper">
+		<div id="fh5co-page">
   <section id="menubar">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary;"
-      style="background-color: #13d40cdc;width:100%;width:auto;">
+      style="background-color: #9ca9dfe7;width:100%;width:auto;">
 
-      <a class="navbar-brand" href="{% url 'entrypage' %}">
+      <!-- <a class="navbar-brand" href="">
         <img src="{% static 'prasad/images/bdzlogo.png' %}" alt="Logo" style="height: 50px;width:50px;">
-      </a>
-      </a>
+      </a> -->
+
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -47,17 +58,17 @@
 
           <li class="nav-item " style="font-size: 23px;">
 
-            <!-- here in href section the url name is the same name given in the name string given in the url path in urls.py -->
-            <a class="nav-link" href="{% url 'web_home' %}">Home</a>
+            <!-- here in href section path given initially in urls  -->
+            <a class="nav-link" href="{% url 'homepage' %}">Home</a>
           </li>
           <li class="nav-item " style="font-size: 23px;">
 
-            <!-- here in href section the url name is the same name given in the name string given in the url path in urls.py -->
-            <a class="nav-link" href="{% url 'about_company' %}">About</a>
+
+            <a class="nav-link" href="/about/">About</a>
           </li>
           <li class="nav-item" style="font-size: 23px;">
-
-            <a class="nav-link" href="{% url 'web_services' %}">Services</a>
+            <!-- here in href section the url name is the same name given in the name string given in the url path in urls.py -->
+            <a class="nav-link" href="/services/">Services</a>
           </li>
 
           <li class="nav-item" style="font-size: 23px;">
@@ -69,6 +80,10 @@
           <li class="nav-item" style="font-size: 23px;">
             <a class="nav-link" href="{% url 'bookingpage' %}">Book-Now</a>
           </li>
+          <li class="nav-item" style="font-size: 23px;">
+            <!-- <a class="nav-link" href="{% url 'apipage' %}">Check-API</a> -->
+            <a class="nav-link" href="#">Check-API</a>
+          </li>
         </ul>
 
         <h1 style=" padding-left:50px;font-family:bold ; color:rgb(233, 233, 226);"> BISWASH TENT HOUSE </h1>
@@ -78,8 +93,8 @@
       </div>
     </nav>
   </section>
-  <a href="{% url 'bookingpage' %}" style="margin-left:400px ;">Book in advance for comming season with full payment and
-    get 10% discount !!!</a>
+  <a href="{% url 'bookingpage' %}" style="margin-left:250px ;">Book in advance for comming season with full payment and
+    get 10% discount !!! 9848724282 , 9858750114 , 099540190</a>
 
 
 
@@ -96,11 +111,11 @@
     <section id="footer">
       <footer id="footer">
         <div id="footer-inner">
-          <a href="{% url 'home' %}"><img src="{% static 'prasad/images/bdzlogo.png' %}"
+          <a href="{% url 'homepage' %}"><img src="{% static 'prasad/images/bdzlogo.png' %}"
               style="height: 35px;width:35px;"></a>
           <a href="https://www.youtube.com/channel/UC9YUCbM51ta8f36Km-gSqdA" target="_blank"><img
               src="{% static 'prasad/images/youtube.png' %}"> </a>
-          &copy; Copyright <a href="{% url 'about_company' %}">2023 Biswash Tent House</a>
+          &copy; Copyright <a href="/about/">2023 Biswash Tent House</a>
 
           &#124; <a href="#">Privacy Policy</a>
           &#124; <a
@@ -127,6 +142,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"></script>
+  </div>
+  </div>
 </body>
 
 </html>

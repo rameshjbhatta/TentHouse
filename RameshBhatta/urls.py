@@ -16,19 +16,41 @@ Including another URLconf
 """
 from django.conf import settings
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from prasad import views
 from django.conf.urls.static import static
+from rest_framework import routers
+from prasad.views import api_root
+from django.views.generic import TemplateView
+
+
+admin.site.site_header = 'Biswash Tent House'
+admin.site.index_title = 'Biswash Administration '
+
+router = routers.DefaultRouter()
+router.register(r'users', views.UserViewSet)
+router.register(r'contactinfos',views.ContactInfoViewSet)
+router.register(r'bookinginfos',views.BookingInfoViewSet)
 
 urlpatterns = [
+    path('api/', api_root, name='apipage'),
+    path('api/',include(router.urls)),
+    path('api-auth/',include('rest_framework.urls',namespace='rest_framework')),
     path('admin/', admin.site.urls),
-    path('', views.entrypage, name='entrypage'),
-    path('home', views.index, name='home'),
-    path('about/', views.about, name='about_company'),
-    path('home/', views.home, name='web_home'),
+
+# Here is no need to render data so simply redirect it to template using TemplateView class of Django
+    path('', TemplateView.as_view(template_name='prasad/entrypage.html')),
+    
+    path('about/', TemplateView.as_view(template_name='prasad/about.html')),
+ 
+
+#And for rendering data just direct it to the views and redirect to template with data
+    path('home/',views.index, name='homepage' ),
+    path('funky', views.funky),
     path('services/', views.services, name='web_services'),
     path('gallery/', views.gallery, name='web_gallery'),
     path('contact/', views.contact, name='web_contact'),
+    path('democontact/', views.democontact, name='democontact'),
     path('booking/', views.booking_handler, name='bookingpage'),
 
 

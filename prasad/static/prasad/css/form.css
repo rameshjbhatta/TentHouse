@@ -1,70 +1,143 @@
-
- 
-  
-      
-      .my-form {
-        max-width: 400px;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #d0eee2;
-        border-radius: 5px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      }
-      
-      /* h2 {
-        text-align: center;
-        color: #333333;
-      }
-       */
-      /* .form-groups {
-        margin-bottom: 20px;
-      } */
-      
-      .my-form label {
-        display: block;
-        color: #555555;
-        font-weight: bold;
-        margin-bottom: 5px;
-      }
-      
-      .my-form input[type="text"],
-      .my-form input[type="email"],
-      .my-form textarea {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #cccccc;
-        border-radius: 4px;
-        font-size: 14px;
-      }
-      
-      .my-form input[type="submit"] {
-        background-color: #008cba;
-        color: #ffffff;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 14px;
-      }
-      
-      .my-form input[type="submit"]:hover {
-        background-color: #0077a3;
-      }
-      /* static/css/forms.css */
-/* Add your custom CSS styles here */
-/* .my-form {
-  border: 1px solid #ccc;
-  padding: 10px;
+/* Add this CSS to your prasad/css/form.css file
+.my-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .my-form label {
   display: block;
+  color: #444;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .my-form input[type="text"],
+.my-form input[type="email"],
 .my-form textarea {
   width: 100%;
-  padding: 5px;
-  margin-bottom: 10px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #555;
+  transition: border-color 0.3s ease;
+}
+
+.my-form input[type="text"]:focus,
+.my-form input[type="email"]:focus,
+.my-form textarea:focus {
+  border-color: #cbe0f7;
+}
+
+.my-form textarea {
+  resize: vertical;
+}
+
+.my-form input[type="submit"] {
+  background-color: #e8eff7;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.my-form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.my-form .message {
+  margin-top: 10px;
+  color: #d6e4f3;
+  font-size: 14px;
+}
+
+
+.my-form::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  left: -10px;
+  background: linear-gradient(45deg, #e1e9f3, #cff3ec);
+  border-radius: 20px;
+  z-index: -1;
 } */
+.my-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.my-form label {
+  display: block;
+  color: #444;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.my-form input[type="text"],
+.my-form input[type="email"],
+.my-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #555;
+  transition: border-color 0.3s ease;
+}
+
+.my-form input[type="text"]:focus,
+.my-form input[type="email"]:focus,
+.my-form textarea:focus {
+  border-color: #cbe0f7;
+}
+
+.my-form textarea {
+  resize: vertical;
+}
+
+.my-form input[type="submit"] {
+  background-color: #e8eff7;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.my-form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.my-form .message {
+  margin-top: 10px;
+  color: #bdd5ee;
+  font-size: 14px;
+}
+
+/* Add a custom background for the form */
+.my-form::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  left: -10px;
+  background: linear-gradient(45deg, #e1e9f3, #cff3ec);
+  border-radius: 20px;
+  z-index: -1;
+}

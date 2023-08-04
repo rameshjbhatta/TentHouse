@@ -1,0 +1,70 @@
+
+  body {
+    font-family: 'Arial', sans-serif; /* Standard font */
+    line-height: 1.6;
+    color: #333;
+  }
+
+  .my-form {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+  }
+
+  .my-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+  }
+
+  .my-form input[type="text"],
+  .my-form input[type="email"],
+  .my-form input[type="number"],
+  .my-form textarea,
+  .my-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .my-form textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  .my-form input[type="submit"] {
+    background-color: #10ca29;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+
+  .my-form input[type="submit"]:hover {
+    background-color: #0da921;
+  }
+
+  .my-form ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .my-form li {
+    margin-bottom: 20px;
+  }
+
+  .my-form textarea::placeholder {
+    color: #999;
+  }
+

@@ -1,61 +1,68 @@
-
-/* Reset some default styles for better consistency */
-body, h1, h2, p, ul, li {
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    background-color: #f5f8f8;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-   
-}
-
-
-h2 {
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-
-hr {
-    border: none;
-    border-top: 2px solid #ccc;
-    margin: 15px 0;
-}
-
-
-
-a {
-    color: #007BFF;
+/* Add this CSS to your prasad/css/style.css file */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  .section-title {
+    color: #000;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .divider {
+    border-top: 2px solid #000;
+  }
+  
+  .contact-section {
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .address-info img,
+  .contact-info img {
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  
+  .address-link,
+  .contact-info a {
+    color: #007bff;
     text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-p {
-    margin-bottom: 10px;
-}
-
-.my-form {
+  }
+  
+  .leave-message-title {
+    color: #090c09dc;
+    font-size: 34px;
+    font-weight: bold;
+    margin-top: 40px;
+  }
+  
+  .my-form {
     margin-top: 20px;
-}
-
-input[type="submit"] {
-    background-color: #d2e0ee;
+  }
+  
+  .my-form input[type="submit"] {
+    background-color: #007bff;
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 12px 25px;
     cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: #d5e1ee;
-}
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .my-form input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .message {
+    color: #007bff;
+    margin-top: 20px;
+    font-size: 18px;
+    list-style: none;
+  }
+  

@@ -1,13 +1,117 @@
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  h2{
-    font-family:sans-serif;
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 15px;
-  }
-  
+/* Add this CSS to prasad/css/contact.css */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.contact-info-container {
+  width: 45%;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+.contact-info-container h2,
+.contact-form-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+  color: #555;
+}
+
+.contact-info li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info i {
+  margin-right: 10px;
+  color: #0056b3;
+}
+
+.contact-info a {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.contact-map {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.contact-map img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.contact-form-container {
+  width: 50%;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.contact-form-container .contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form-container .form-group {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.contact-form-container label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.contact-form-container input,
+.contact-form-container textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #555;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form-container input:focus,
+.contact-form-container textarea:focus {
+  border-color: #cbe0f7;
+}
+
+.contact-form-container textarea {
+  resize: vertical;
+}
+
+.contact-form-container input[type="submit"] {
+  background-color: #0056b3;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form-container input[type="submit"]:hover {
+  background-color: #1a80e6;
+}
