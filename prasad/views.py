@@ -10,7 +10,6 @@ from django.core.paginator import Paginator
 from django.shortcuts import render
 from .models import ServiceInfo
 
-#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
 def api_root(request):
     api_root_data = {
     "users": "http://127.0.0.1:8000/api/users/",
