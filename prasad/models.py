@@ -45,7 +45,7 @@ class ContactInfo(models.Model):
         
 
 class ServiceInfo(models.Model):
-    sn = models.IntegerField(primary_key=True)
+    sn = models.IntegerField(primary_key=True,auto_created=True)
     title=models.CharField(max_length=264)
     img=models.ImageField(upload_to='images', blank=True, null=True)
     content =  models.TextField()
