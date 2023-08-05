@@ -3,6 +3,6 @@
 			#footerblurb .column { margin:0; text-align:justify; float:left;width:250px;padding:0 24px;}
 			
 		
-			#footer { background:#9ca9dfe7;}
+			#footer { background:#9ca9dfe7;position: fixed;}
 			#footer-inner { margin:auto; text-align:center; padding:12px; width:970px;}
 			#footer a {color:rgb(236, 241, 243);text-decoration:none;}
