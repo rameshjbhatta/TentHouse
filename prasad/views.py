@@ -9,7 +9,11 @@ from .serializer import *
 from django.core.paginator import Paginator
 from django.shortcuts import render
 from .models import ServiceInfo
+import requests
+from django.contrib.auth.decorators import login_required
 
+
+@login_required
 def api_root(request):
     api_root_data = {
     "users": "http://127.0.0.1:8000/api/users/",
@@ -33,19 +37,12 @@ class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()   
     serializer_class = UserSerializer 
 
-
-from django.http import HttpResponseRedirect
-
-def funky(request):
-    a = 1
-    b = 2
-    c = 3
-    output = f'a: {a}, b: {b}, c: {c}'
-    return HttpResponse(output)
-    # response="""<html><body><p>Hello this is the response and i get""" +request.GET['guess']+"""you got of the request you made</p></body></html>"""
-    # return HttpResponse(response)
-
-
+def ContactDataAPI(request):
+    response = requests.get("http://127.0.0.1:8000/api/contactinfos/")
+    print(response)
+    data = response.json()
+    print(data)   
+    return render(request,'prasad/check.html',{'data':data})
 
 def entrypage(request):
     return render(request, 'prasad/entrypage.html')
@@ -112,18 +109,20 @@ def booking_handler(request):
     detail = BookingInfo.objects.all()
     return render(request, 'prasad/booking.html', {'detail': detail})
 
-from django.db.models import Q
-def search_handler(request):
-    query = request.GET.get('query')
-    results = None
-    if query:
-        # Implement your search logic here using the 'query' variable.
-        data = ServiceInfo.objects.filter(Q(title__icontains=query))
-        items_per_page = 2
-        paginator = Paginator(data,items_per_page) #configure paginator
-        current_page = request.GET.get('page') #get current page
-        results = paginator.get_page(current_page)#get current page
-    return render(request, 'prasad/services.html', {'query': query, 'results': results})
+
+#search query
+# from django.db.models import Q
+# def search_handler(request):
+#     query = request.GET.get('query')
+#     results = None
+#     if query:
+#         # Implement your search logic here using the 'query' variable.
+#         data = ServiceInfo.objects.filter(Q(title__icontains=query)|Q(img__icontains=query)|Q(content__icontains=query))
+#         items_per_page = 2
+#         paginator = Paginator(data,items_per_page) #configure paginator
+#         current_page = request.GET.get('page') #get current page
+#         results = paginator.get_page(current_page)#get current page
+#     return render(request, 'prasad/services.html', {'query': query, 'results': results})
 
     
 

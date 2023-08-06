@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Data from API</title>
+</head>
+<body>
+    <table>
+      <tr> <th>ID</th><th>Mobile</th><th>Name</th><th>Message</th></tr>
+      {% for i in data %}
+      <tr>
+        <td>{{i.id}}</td> 
+        <td>{{i.mobile}}</td> 
+        <td>{{i.name}}</td> 
+         <td>{{i.message}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+    
+   
+   
+   
+ 
+    
+</li>
+</ol>
+</body>
+</html>

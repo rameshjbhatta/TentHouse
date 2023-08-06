@@ -33,6 +33,7 @@ router.register(r'contactinfos',views.ContactInfoViewSet)
 router.register(r'bookinginfos',views.BookingInfoViewSet)
 
 urlpatterns = [
+    
     path('api/', api_root, name='apipage'),
     path('api/',include(router.urls)),
     path('api-auth/',include('rest_framework.urls',namespace='rest_framework')),
@@ -46,13 +47,13 @@ urlpatterns = [
 
 #And for rendering data just direct it to the views and redirect to template with data
     path('home/',views.index, name='homepage' ),
-    path('funky', views.funky),
     path('services/', views.services, name='web_services'),
     path('gallery/', views.gallery, name='web_gallery'),
     path('contact/', views.contact, name='web_contact'),
+    path('contactAPI/', views.ContactDataAPI, name='web_contactAPI'),
     path('democontact/', views.democontact, name='democontact'),
     path('booking/', views.booking_handler, name='bookingpage'),
-    path('search/', views.search_handler, name='searchpage'),
+    # path('search/', views.search_handler, name='searchpage'),
 
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

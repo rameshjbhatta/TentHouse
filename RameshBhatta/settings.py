@@ -128,3 +128,5 @@ MEDIA_ROOT = BASE_DIR/'media'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+LOGIN_REDIRECT_URL = 'apipage'  # or 'api_root', depending on the name used in urlpatterns
+LOGIN_URL = 'login'
