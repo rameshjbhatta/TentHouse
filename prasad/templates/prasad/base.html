@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="{% static 'prasad/css/footerstyle.css' %}">
   <link rel="stylesheet" href="{% static 'prasad/css/style.css' %}">
   <!-- <link rel="stylesheet"  href="{% static 'prasad/css/contact.css' %}"> -->
+  
 
   
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
@@ -76,25 +77,29 @@
             <a class="nav-link" href="{% url 'web_contact' %}">Contacts</a>
           </li>
           <li class="nav-item" style="font-size: 23px;">
-            <a class="nav-link" href="{% url 'bookingpage' %}">Book-Now</a>
+            <a class="nav-link" href="{% url 'bookingpage' %}" >Book-Now</a>
           </li>
-          <li class="nav-item" style="font-size: 23px;">
-            <!-- <a class="nav-link" href="{% url 'apipage' %}">Check-API</a> -->
+          <!-- <li class="nav-item" style="font-size: 23px;">
+            <a class="nav-link" href="{% url 'apipage' %}">Check-API</a> 
             <a class="nav-link" href="#">Check-API</a>
-          </li>
+          </li> -->
+          <nav class="navbar navbar-light ">
+            <form class="form-inline" action="{% url 'searchpage' %}" method="get">
+              {% csrf_token %}
+              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"  name="query" value="{{ query }}" style="margin-left:20%;">
+            </form>
+          </nav>
         </ul>
-
+        
         <h1 style=" padding-left:50px;font-family:bold ; color:rgb(233, 233, 226);"> BISWASH TENT HOUSE </h1>
-        <!-- <form class="form-inline my-2 my-lg-0" > -->
-        <!--  -->
-        <!-- </form> -->
+      
       </div>
     </nav>
   </section>
   <a href="{% url 'bookingpage' %}" style="margin-left:250px ;">Book in advance for comming season with full payment and
     get 10% discount !!! 9848724282 , 9858750114 , 099540190</a>
 
-
+   
 
   {% block content %}
 
@@ -103,6 +108,21 @@
 
 
   {% endblock %}
+  {% if results %}
+    {% for data in results %}
+      <li>
+        <div class="owl-carousel">
+          <div class="card">
+            <img class="card-img-top" src="{{ data.img.url }}" alt="{{ data.title }}">
+            <div class="card-body">
+              <h5 class="card-title">{{ data.title }}</h5>
+              <p class="card-text">{{ data.content }}</p>
+              <p class="card-text"><small class="text-muted">BTH</small></p>
+            </div>
+          </div>
+     </li>
+    {% endfor %}
+{% endif %}
   <br>
   <div class="clr"></div>
   <Footer>

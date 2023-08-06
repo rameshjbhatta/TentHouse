@@ -52,6 +52,7 @@ urlpatterns = [
     path('contact/', views.contact, name='web_contact'),
     path('democontact/', views.democontact, name='democontact'),
     path('booking/', views.booking_handler, name='bookingpage'),
+    path('search/', views.search_handler, name='searchpage'),
 
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

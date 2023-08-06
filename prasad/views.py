@@ -112,7 +112,18 @@ def booking_handler(request):
     detail = BookingInfo.objects.all()
     return render(request, 'prasad/booking.html', {'detail': detail})
 
-
+from django.db.models import Q
+def search_handler(request):
+    query = request.GET.get('query')
+    results = None
+    if query:
+        # Implement your search logic here using the 'query' variable.
+        data = ServiceInfo.objects.filter(Q(title__icontains=query))
+        items_per_page = 2
+        paginator = Paginator(data,items_per_page) #configure paginator
+        current_page = request.GET.get('page') #get current page
+        results = paginator.get_page(current_page)#get current page
+    return render(request, 'prasad/services.html', {'query': query, 'results': results})
 
     
 
