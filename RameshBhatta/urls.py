@@ -47,6 +47,7 @@ urlpatterns = [
 
 #And for rendering data just direct it to the views and redirect to template with data
     path('home/',views.index, name='homepage' ),
+    path('check/',views.ContactDataAPI, name='check' ),
     path('services/', views.services, name='web_services'),
     path('gallery/', views.gallery, name='web_gallery'),
     path('contact/', views.contact, name='web_contact'),

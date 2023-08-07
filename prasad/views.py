@@ -10,10 +10,8 @@ from django.core.paginator import Paginator
 from django.shortcuts import render
 from .models import ServiceInfo
 import requests
-from django.contrib.auth.decorators import login_required
 
 
-@login_required
 def api_root(request):
     api_root_data = {
     "users": "http://127.0.0.1:8000/api/users/",
@@ -38,11 +36,13 @@ class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer 
 
 def ContactDataAPI(request):
-    response = requests.get("http://127.0.0.1:8000/api/contactinfos/")
+    response = requests.get("http://127.0.0.1:8000/api/bookinginfos/")
     print(response)
     data = response.json()
-    print(data)   
-    return render(request,'prasad/check.html',{'data':data})
+    nepali_text = "नमस्कार"
+    print(nepali_text)
+    print(data)  
+    return render(request,'prasad/check.html',{'data':data,'nepali_text':nepali_text})
 
 def entrypage(request):
     return render(request, 'prasad/entrypage.html')

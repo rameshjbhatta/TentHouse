@@ -6,15 +6,21 @@
 </head>
 <body>
     <table>
-      <tr> <th>ID</th><th>Mobile</th><th>Name</th><th>Message</th></tr>
+      <tr> </tr>
       {% for i in data %}
       <tr>
         <td>{{i.id}}</td> 
-        <td>{{i.mobile}}</td> 
-        <td>{{i.name}}</td> 
-         <td>{{i.message}}</td>
+        <td>{{i.booking_name}}</td> 
+        <td>{{i.event_name}}</td> 
+         <td>{{i.address}}</td>
+         <td>{{i.email}}</td>
+         <td>{{i.full_name}}</td>
+         <td>{{i.mobile_no}}</td>
+         <td>{{i.event_day_choice}}</td>
+         <td>{{i.other_details}}</td>
     </tr>
     {% endfor %}
+    {{ nepali_text }}
     </table>
     
    
