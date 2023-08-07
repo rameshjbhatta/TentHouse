@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from prasad.magicform import ContactInfoForm
 from django.contrib import messages
 from prasad.models import *
-from rest_framework import viewsets
+from rest_framework import viewsets, permissions
 from django.contrib.auth.models import User
 from .serializer import *
 from django.core.paginator import Paginator
@@ -25,24 +25,28 @@ def api_root(request):
 class ContactInfoViewSet(viewsets.ModelViewSet):
     queryset= ContactInfo.objects.all()
     serializer_class=ContactInfoSerializer
+    permission_classes = [permissions.IsAuthenticated]
 
-
-class  BookingInfoViewSet(viewsets.ModelViewSet):
+# inherits the behavior for handling various HTTP methods (GET, POST, PUT, DELETE) from the ModelViewSet class
+class  BookingInfoViewSet(viewsets.ModelViewSet): 
     queryset = BookingInfo.objects.all()
     serializer_class = BookingInfoSerializer
+    permission_classes = [permissions.IsAuthenticated] #accessible only to authenticated users (login users)
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()   
-    serializer_class = UserSerializer 
+    serializer_class = UserSerializer
+    permission_classes = [permissions.IsAuthenticated] 
 
 def ContactDataAPI(request):
     response = requests.get("http://127.0.0.1:8000/api/bookinginfos/")
     print(response)
-    data = response.json()
-    nepali_text = "नमस्कार"
-    print(nepali_text)
-    print(data)  
-    return render(request,'prasad/check.html',{'data':data,'nepali_text':nepali_text})
+    if response.status_code == '200':
+        data = response.json()
+        return render(request,'prasad/check.html',{'data':data})
+    else:
+       
+       return redirect('admin:login')  #redirect to login page of admin for api access
 
 def entrypage(request):
     return render(request, 'prasad/entrypage.html')
