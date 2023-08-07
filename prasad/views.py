@@ -45,8 +45,7 @@ def ContactDataAPI(request):
         data = response.json()
         return render(request,'prasad/check.html',{'data':data})
     else:
-       
-       return redirect('admin:login')  #redirect to login page of admin for api access
+       return HttpResponse('Please Log-In First')  #redirect to login page of admin for api access
 
 def entrypage(request):
     return render(request, 'prasad/entrypage.html')
